@@ -290,7 +290,9 @@ class ChatActivity : BaseActivity() {
             onBackPressed()
         }
         binding.layoutSend.setOnClickListener {
-            sendMessage()
+            if (binding.inputMessage.text.isNotEmpty()) {
+                sendMessage()
+            }
         }
     }
 
